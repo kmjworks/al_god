@@ -26,7 +26,7 @@ k - index of the first element in the target array where we want to store the so
 i = 1; j = 1; k = 1; <br />
 
 Pseudocode: <br />
-
+```
 Merge(A, B, n, m) {
     while(i <= n && j <= m) {
         if(A[i] < B[j]) 
@@ -52,6 +52,7 @@ Merge(A, B, n, m) {
         k++
     }
 }
+```
 
 
 
