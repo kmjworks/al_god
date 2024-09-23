@@ -14,6 +14,7 @@ B = {6, 12, 5, 1} <br />
 We want to merge it into a single sorted list. <br />
 I will define a couple of other parameters that help us in the merging process.
 
+---
 C - target array in which we will store the final result
 
 n - length of A sub-array <br />
