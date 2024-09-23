@@ -24,7 +24,7 @@ i - index of the first element of sub-array A <br />
 j - index of the first element of sub-array B <br />
 k - index of the first element in the target array where we want to store the sorted list <br />
 
-i = 1; j = 1; k = 1; <br />
+```i = 1; j = 1; k = 1``` <br />
 
 Pseudocode: <br />
 ```
