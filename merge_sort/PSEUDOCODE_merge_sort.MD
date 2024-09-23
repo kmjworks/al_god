@@ -7,7 +7,7 @@ After that, we merge all the small parts together.
 
 ### Pseudocode for Merging
 
-Suppose we have two sub-arrays that each contain 5 elements.
+Suppose we have two sub-arrays that each contain 5 elements. <br />
 A = { 2, 8, 3, 15 } <br />
 B = {6, 12, 5, 1} <br />
 
