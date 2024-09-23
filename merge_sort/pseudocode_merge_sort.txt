@@ -12,8 +12,12 @@ j = 1 (index of first element in B)
 
 
 -------
-
-for k = 1 to n
+	
+while(i <= 
 	if(A[i] < B[j]) 
 		c[k] = A[i]
-
+		i++;
+		k++;
+	else
+		c[k] = B[j]
+		j++	
