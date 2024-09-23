@@ -3,14 +3,14 @@
  *
  *       Filename:  merge_sort.c
  *
- *    Description: Merge sort algorithm 
+ *    Description: Sandbox environment for the algorithm development 
  *
  *        Version:  1.0
  *        Created:  09/22/2024 08:56:27 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  NULL, 
+ *         Author:  specter, 
  *   Organization:  
  *
  * =====================================================================================
