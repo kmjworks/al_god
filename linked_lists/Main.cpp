@@ -47,29 +47,53 @@ int main(void) {
 	}
 } 
 
- 
-
- int insertNewObject(HeaderD** pStruct7, char *pNewID, int NewCode) {
 
 
-	 if (!((*pNewID) >= 'A' && (*pNewID) <= 'Z')) {
-		 return 0; 
-	 }
-
-	 while ((*pStruct7)) {
-		 Object7* t = (Object7*)(*pStruct7)->pObject;
-		 if (t->pID == pNewID) {
-			 // todo must also check linked objects (pObject) 
-			 return 0; 
-		 }
-		 else {
-			 (*pStruct7) = (*pStruct7)->pNext;
-		 }
-	 }
+int insertNewObject(HeaderD** pStruct7, char *pNewID, int NewCode) {
 
 
-		
+ if (!((*pNewID) >= 'A' && (*pNewID) <= 'Z')) {
 	 return 0; 
  }
 
  
+ HeaderD** first = (HeaderD**)(*pStruct7); 
+ HeaderD** last = (HeaderD**)(*pStruct7); 
+ Object7* temp; 
+
+ first = (HeaderD**)(*pStruct7);
+ last = (HeaderD**)(*pStruct7); 
+ int nodes_found = 0; 
+
+
+ while ((*pStruct7)) {
+	 if ((*pStruct7)->cBegin != *pNewID) {
+		 if ((*pStruct7)->cBegin > *pNewID) {
+			 (*last) = (*pStruct7);
+			 while (*first) {
+				 if (((*last)->cBegin - (*first)->cBegin) == 1) {
+					 break;
+				 }
+			 }
+			 break;
+		 }
+		 (*pStruct7) = (*pStruct7)->pNext;
+	 }
+
+	 (*pStruct7) = (HeaderD*)malloc(sizeof(pStruct7));
+	 (*pStruct7)->cBegin = *pNewID; 
+	 (*pStruct7)->pNext = (HeaderD*)last;
+	 (*pStruct7)->pPrior = (HeaderD*)first;
+	 temp = (Object7*)(*pStruct7)->pObject;
+	 temp->pID = pNewID;
+	 temp->Code = NewCode; 
+
+	
+
+ }
+
+
+
+
+ return 0; 
+} 
